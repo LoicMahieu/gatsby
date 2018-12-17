@@ -256,6 +256,11 @@ exports.onPreInit = true
 exports.onPreBootstrap = true
 
 /**
+ * Called before Gatsby generates the first GraphQL schema.
+ */
+exports.onPreSchema = true
+
+/**
  * Called at the end of the bootstrap process after all other extension APIs have been called.
  */
 exports.onPostBootstrap = true

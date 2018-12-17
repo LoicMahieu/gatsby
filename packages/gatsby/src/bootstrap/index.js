@@ -378,6 +378,12 @@ module.exports = async (args: BootstrapArgs) => {
   await require(`../utils/source-nodes`)({ parentSpan: activity.span })
   activity.end()
 
+  // onPreSchema
+  activity = report.activityTimer(`onPreSchema`)
+  activity.start()
+  await apiRunnerNode(`onPreSchema`)
+  activity.end()
+
   // Create Schema.
   activity = report.activityTimer(`building schema`, {
     parentSpan: bootstrapSpan,

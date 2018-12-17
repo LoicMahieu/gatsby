@@ -38,6 +38,7 @@ The sequence of the **main** bootstrap Node API lifecycles are:
 - [onPreBootstrap](https://www.gatsbyjs.org/docs/node-apis/#onPreBootstrap) e.g. implemented by [`gatsby-plugin-typography`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-typography/src/gatsby-node.js)
 - [sourceNodes](https://www.gatsbyjs.org/docs/node-apis/#sourceNodes) e.g. implemented by [`gatsby-source-wikipedia`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wikipedia/src/gatsby-node.js)
   - within this `createNode` can be called multiple times, which then triggers [onCreateNode](https://www.gatsbyjs.org/docs/node-apis/#onCreateNode).
+- [onPreSchema](https://www.gatsbyjs.org/docs/node-apis/#onPreSchema)
 - (the first schema build happens here)
 - [resolvableExtensions](https://www.gatsbyjs.org/docs/node-apis/#resolvableExtensions) for filetype/language extensions eg [`gatsby-plugin-typescript`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-typescript/src/gatsby-node.js)
 - [createPages](https://www.gatsbyjs.org/docs/node-apis/#createPages) e.g. implemented by [`page-hot-reloader`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/bootstrap/page-hot-reloader.js)
